@@ -23,8 +23,8 @@
     The first one is done for you. 
 */
 const planning = "This is the first step, in which the end goal of the software is determined and defined. Developers typically will see what systems are already in place, and determine what features will need to be added."
-const Analysis of Requirements; = "  all the requirements for the target software are specified. These requirements get approval from the customers, market analysts, and stakeholders. "
+const AnalysisOfRequirements = "all the requirements for the target software are specified. These requirements get approval from the customers, market analysts, and stakeholders. "
 const Design = " Software designers come up with the best architecture for the software "
 const Implementation = "At this stage, the fundamental development of the product starts. For this, developers use a specific programming code js, python, etc"
-const Testing&Integration = "test the software to make sure it works properly tracking and fixing flaws "
+const TestingAndIntegration = "test the software to make sure it works properly tracking and fixing flaws "
 const Maintain = "testing in a real industrial enviroment to make sure it works smoothly contuning to work out flaws"

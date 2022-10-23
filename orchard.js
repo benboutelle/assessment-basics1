@@ -50,13 +50,14 @@ const pinkPrice = .55
 */
 
 // CODE HERE
-
+//WATCH THE VIDEO LMFAO SMFH 
+ let totalAcres = 0
 for (let i = 0; i < fujiAcres.length; i++){
-    console.log(fujiAcres)
+    totalAcres += fujiAcres[i]
 } for (let i = 0; i < galaAcres.length; i++){
-    console.log(galaAcres)
+    totalAcres += galaAcres[i]
 } for (let i = 0;i < pinkAcres.length; i++){
-    console.log(pinkAcres)
+    totalAcres += pinkAcres[i]
 }{
     console.log(totalAcres)
 }
@@ -64,6 +65,7 @@ for (let i = 0; i < fujiAcres.length; i++){
 
 // i tried this code and it wouldnt add up all the acres it just ended up being a infinate loop lol so i killed the terminal
 // i probs need to switch the ++ out for a diffrent function ikd haha
+// looking at the refrence video i saw that that i didnt need to console.log every loop but instead use the += command to add the arrays together lol
 // PROBLEM 2
 
 /*
@@ -80,8 +82,10 @@ for (let i = 0; i < fujiAcres.length; i++){
 // so from total acres i would then google how to find avergaes in arrays and creat a for loop in and array that would calculate that for me
 // goin over the 3 diffrent acres day by day
 
+let averageDailyAcres = totalAcres / 7  
+console.log(averageDailyAcres)
 
-
+//kyle broke this problem doen like a champ! blew my mind! it thought the process to get the answer was gonna be way harder then it actually was. i need more practice breaking down the questions in psudo code lol
 
 // PROBLEM 3
 
@@ -116,9 +120,13 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
-
-
-
+//again i thought i was needing to code way more then i needed too so i didnt answer to work on problem 1 lol. i forgot about the number commands += and -= 
+// kyle said to not be mad that this answer would be only 4 lines of code. not mad just again const mind = blown lol
+ while(acresLeft > 0){
+    days++
+    acresLeft -= averageDailyAcres 
+}
+    console.log(days)
 // PROBLEM 4
 
 /*
@@ -145,14 +153,27 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+ let fujiTons = []
+ let galaTons = []
+ let pinkTons = []
 
+ for (let i = 0; i < fujiAcres.length; i++){
+    let tons = fujiAcres[i] * 6.5
+    fujiTons.push(tons)
+ }
 
+ for (let i = 0; i < galaAcres.length; i++){
+    let tons = galaAcres[i] * 6.5
+    galaTons.push(tons)
+ }
 
-
-
+ for (let i = 0; i < pinkAcres.length; i++){
+    let tons = pinkAcres[i] * 6.5
+    pinkTons.push(tons)
+ }
+console.log(fujiTons)
+console.log(galaTons)
+console.log(pinkTons)
 
 // PROBLEM 5
 
@@ -172,15 +193,24 @@ let days = 0
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+ let fujiPounds = 0
+ let galaPounds = 0
+ let pinkPounds = 0
 
+ for (let i=0; i < fujiTons.length; i++){
+    fujiPounds += fujiTons[i] * 2000
+ }
 
+ for (let i=0; i < galaTons.length; i++){
+    galaPounds += galaTons[i] * 2000
+ }
 
-
-
-
+ for (let i=0; i < pinkTons.length; i++){ 
+    pinkPounds += pinkTons[i] * 2000
+ }
+ console.log(fujiPounds)
+ console.log(galaPounds)
+ console.log(pinkPounds)
 // PROBLEM 6
 
 /*
@@ -199,13 +229,13 @@ let days = 0
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+ let fujiProfit = fujiPounds * fujiPrice
+ let galaProfit = galaPounds * galaPrice
+ let pinkProfit = pinkPounds * pinkPrice
 
-
-
-
+console.log(fujiProfit )
+console.log(galaProfit )
+console.log(pinkProfit )
 
 
 // PROBLEM 7
@@ -219,3 +249,5 @@ let days = 0
 */
 
 // CODE HERE
+let toatalProfit = fujiProfit + galaProfit + pinkProfit
+console.log(toatalProfit)
